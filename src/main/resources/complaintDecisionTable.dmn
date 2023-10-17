@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_061qvnp" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.15.2" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.19.0">
+  <decision id="complaintDecisionTable" name="Complaint Decision Table">
+    <decisionTable id="DecisionTable_09g55ns">
+      <input id="Input_1" label="Complaint Type">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text>department</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="Complaint Message" typeRef="string" />
+      <rule id="DecisionRule_07o4kor">
+        <inputEntry id="UnaryTests_0vf1sse">
+          <text>"quality"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1f78nvw">
+          <text>"Complaint was sent to the quality department"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0bjoh0k">
+        <inputEntry id="UnaryTests_1fm279y">
+          <text>"delivery"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0vcw5os">
+          <text>"Complaint was sent to the delivery department"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1izwzej">
+        <inputEntry id="UnaryTests_0a3vea8">
+          <text>"finance"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0efeq5w">
+          <text>"Complaint was sent to the finance department"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="complaintDecisionTable">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>
